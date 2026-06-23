@@ -1,0 +1,24 @@
+# ── LaTeX 编译产物 ──
+build/
+
+# ── LaTeX 辅助文件（根目录残留时忽略） ──
+*.aux
+*.bbl
+*.blg
+*.fdb_latexmk
+*.fls
+*.log
+*.out
+*.synctex.gz
+*.synctex(busy)
+*.toc
+*.xdv
+
+# ── 系统文件 ──
+.DS_Store
+Thumbs.db
+
+# ── 编辑器 ──
+*.swp
+*.swo
+*~

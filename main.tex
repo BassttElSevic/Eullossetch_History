@@ -1,0 +1,102 @@
+% ═══════════════════════════════════════
+%   Eullosetch 简明地区史
+% ═══════════════════════════════════════
+
+% ── 文档类（A5 小开本，单面布局） ──
+\documentclass[12pt,oneside,a5paper,openany]{ctexbook}
+
+% ── 编码与字体 ──
+\usepackage{fontspec}
+%\setmainfont{Libertinus Serif}          % 英文衬线体（如果安装了就取消注释）
+
+% ── 行距 ──
+\usepackage{setspace}
+\onehalfspacing%
+
+% ── 段落缩进 ──
+\setlength{\parindent}{2em}
+\setlength{\parskip}{0pt plus 1pt}
+
+% ── 页面布局 ──
+\usepackage[
+a5paper,
+inner=2.8cm, outer=2cm,
+top=2.5cm,  bottom=2.5cm,
+headheight=14pt
+]{geometry}
+
+% ── 页眉页脚 ──
+\usepackage{fancyhdr}
+\pagestyle{fancy}
+\fancyhf{}
+\fancyhead[L]{\small\leftmark}
+\fancyhead[R]{\small\thepage}
+\renewcommand{\headrulewidth}{0.4pt}
+
+% ── 章节标题微调 ──
+\ctexset{
+    chapter = {
+    beforeskip = 40pt,
+    afterskip  = 30pt,
+    format     = \centering\LARGE\bfseries,
+    },
+    section = {
+    beforeskip = 20pt,
+    afterskip  = 12pt,
+    format     = \large\bfseries,
+    },
+}
+
+% ── 目录深度（0=章, 1=节, 2=小节, 默认 1） ──
+\setcounter{tocdepth}{1}
+
+% ── 首字下沉 ──
+\usepackage{lettrine}
+
+% ── 章节引言 ──
+\usepackage{epigraph}
+\setlength{\epigraphwidth}{0.7\textwidth}
+
+% ── 脚注格式 ──
+\usepackage[bottom,hang]{footmisc}
+\setlength{\footnotemargin}{1em}
+
+% ── 图书信息 ──
+\title{Eullosetch 简明地区史}
+\author{Eliza C. Parry}
+\date{}
+
+% ═══════════════════════════════════════
+%   文  稿
+% ═══════════════════════════════════════
+\begin{document}
+
+% ──────────────────────────────
+%  第一部分：前置（页码用阿拉伯数字，章不编号）
+% ──────────────────────────────
+\frontmatter%
+\pagenumbering{arabic}                   % 强制阿拉伯页码（覆盖 frontmatter 默认的罗马数字）
+
+\maketitle% 书名页
+\tableofcontents% 目录（编译两遍后自动生成）
+\clearpage%
+
+% ===== 前言 / 序言 =====
+\chapter{序言}
+
+
+
+\chapter{早期Eullossetch概况}
+\chapter{Luyicas入侵}
+% ===== 后记 / 附录 =====
+\chapter{后记}
+
+% 这里写后记内容。
+
+% 如果有参考文献：
+% \chapter{参考文献}
+% \begin{thebibliography}{99}
+%   \bibitem{key} 作者，《书名》，出版社，年份。
+% \end{thebibliography}
+
+\end{document}
