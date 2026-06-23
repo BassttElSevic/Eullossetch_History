@@ -21,9 +21,9 @@
 \input{chapters/preface}                 % 序言
 
 % ──────────────────────────────
-%  第二部分：正文（章有编号，页码从 1 重新开始）
+%  第二部分：正文（章有编号，页码续接前言，不重置）
 % ──────────────────────────────
-\mainmatter
+\makeatletter \@mainmattertrue \makeatother   % 仅启用章编号，不重置页码
 
 \input{chapters/chapter1}                % 第 1 章
 \input{chapters/chapter2}                % 第 2 章
