@@ -1,4 +1,5 @@
 % ═══════════════════════════════════════
+% chktex-file 0                          % 中文文档，关闭 chktex 全局检查
 %   Eullosetch 简明地区史
 % ═══════════════════════════════════════
 
@@ -8,6 +9,11 @@
 % ── 编码与字体 ──
 \usepackage{fontspec}
 %\setmainfont{Libertinus Serif}          % 英文衬线体（如果安装了就取消注释）
+
+% ── 屏蔽中文字体 small caps 误报 ──
+\usepackage{silence}
+\WarningFilter{latexfont}{Font shape}
+\WarningFilter{latexfont}{Some font shapes}
 
 % ── 行距 ──
 \usepackage{setspace}
@@ -61,6 +67,9 @@ headheight=14pt
 \usepackage[bottom,hang]{footmisc}
 \setlength{\footnotemargin}{1em}
 
+% 黑块效果
+\usepackage{censor}
+
 % ── 图书信息 ──
 \title{Eullosetch 简明地区史}
 \author{Eliza C. Parry}
@@ -83,6 +92,17 @@ headheight=14pt
 
 % ===== 前言 / 序言 =====
 \chapter{序言}
+\textit{本书是出于教育与科普目的，为那些对这块苦难的土地上不了解情况的人提供一个参考和快速入门。当然，也方便于外邦的友人，对本国的历史情况，有一个大致的了解。
+        如果能为他们培养出相应的对本国相关历史的兴趣，便再好不过了。}
+
+\textit{本书的内容，主要是根据现有的史料，结合作者的研究与筛选，整理而成。明显地，这本小册子对这块土地上错综复杂的历史情况，提供一个大致的概览。在经过谨慎的思考和选择之后
+        我们并不会为所有的篇章都提供详细的叙述，那些流在土地里面的血与泪水，便留给读者自己去体会。}
+
+\textit{显然的，由于作者的水平有限，谬论和纰漏在所难免。我真诚地希望读者能及时反馈，为我们提供宝贵的建议}
+
+\textit{最后，感谢所有为本书提供帮助的人们。感谢 A. Mikov，是他为本文提供了宝贵的建议，还有编辑 K. Hydalavic 没有他的校对，本书是不可能完成的。以及所有在这个过程中帮助过我的人}
+
+\textit{写于\blackout{1978/08/15},南丘卡拉大学。}
 
 
 
@@ -92,11 +112,5 @@ headheight=14pt
 \chapter{后记}
 
 % 这里写后记内容。
-
-% 如果有参考文献：
-% \chapter{参考文献}
-% \begin{thebibliography}{99}
-%   \bibitem{key} 作者，《书名》，出版社，年份。
-% \end{thebibliography}
 
 \end{document}
