@@ -2,8 +2,8 @@
 %   Eullossetch 简明地区史 — 导言区
 % ═══════════════════════════════════════
 
-% ── 文档类（A5 小开本，单面布局） ──
-\documentclass[12pt,oneside,a5paper,openany]{ctexbook}
+% ── 文档类（A5 小开本，双面布局） ──
+\documentclass[12pt,twoside,a5paper,openany]{ctexbook}
 
 % ── 编码与字体 ──
 \usepackage{fontspec}
@@ -34,8 +34,8 @@ headheight=14pt
 \usepackage{fancyhdr}
 \pagestyle{fancy}
 \fancyhf{}
-\fancyhead[L]{\small\leftmark}
-\fancyhead[R]{\small\thepage}
+\fancyhead[LE,RO]{\small\leftmark}   % 章标题在外侧
+\fancyhead[RE,LO]{\small\thepage}    % 页码在内侧
 \renewcommand{\headrulewidth}{0.4pt}
 
 % ── 章节标题微调 ──
